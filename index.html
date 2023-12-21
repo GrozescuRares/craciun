@@ -82,6 +82,17 @@
         transform: translateY(100vh) rotate(360deg);
       }
     }
+    @media (max-width: 767px) {
+      .card {
+        width: 60%; /* Adjust the width for smaller screens */
+        height: 310px;
+      }
+      .card img {
+      	height: 190px;
+     	border-radius: 3px;
+      	margin-bottom: 5px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -237,7 +248,8 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         anchors:['home', 'day1', 'day2', 'day3', 'day4', 'day5'],
-        sectionsColor: ['#E74C3C', '#355E3B', '#E74C3C', '#355E3B', '#E74C3C', '#355E3B']
+        sectionsColor: ['#E74C3C', '#355E3B', '#E74C3C', '#355E3B', '#E74C3C', '#355E3B'],
+        scrollOverflow: true,
       });
       
       // Add snowflakes
@@ -267,4 +279,3 @@
 
 </body>
 </html>
-
