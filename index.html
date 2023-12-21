@@ -1,103 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iceland Trip Itinerary</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            color: #2c3e50;
-        }
-
-        p {
-            color: #34495e;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iceland Trip Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #2C3E50;
+      overflow: hidden; /* Hide overflow for the snow animation */
+    }
+    h1, h2, p {
+      color: #ECF0F1;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .first-section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-image: url('./day2Aurora.png');
+    }
+    .section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #355E3B;
+      color: #ECF0F1;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      max-width: 400px;
+      width: 100%;
+      height: 550px; /* Fixed height for the cards */
+      text-align: left;
+      overflow: hidden;
+      position: relative; /* Position for snow animation */
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card-content {
+      flex: 1;
+    }
+    .snowflake {
+      position: absolute;
+      background-color: #FFF;
+      border-radius: 50%;
+      animation: fall linear infinite;
+      pointer-events: none; /* Allow clicks through the snowflakes */
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <h2>February 17th</h2>
-                <p>Departure from Targu Mures. Arrive in Budapest and leave the car. Flight to Reykjavik at 3 pm local time. Arrival at 7 pm local time. Check into your apartment in Reykjavik.</p>
-                <!-- Add an image here for Budapest or the airplane -->
-                <!-- <img src="image1.jpg" alt="Budapest or airplane image"> -->
-            </div>
-
-            <div class="swiper-slide">
-                <h2>February 18th</h2>
-                <p>Day trip to the south part of the island. Visit Solheimajokull cascade and Reynisfjara beach starting at 8 am. Northern Lights hunt at 8:30 pm.</p>
-                <!-- Add images here for Solheimajokull cascade, Reynisfjara beach, and Northern Lights -->
-                <!-- <img src="image2.jpg" alt="Solheimajokull"> -->
-            </div>
-
-            <div class="swiper-slide">
-                <h2>February 19th</h2>
-                <p>Explore the beautiful town of Reykjavik.</p>
-                <!-- Add images here for Reykjavik -->
-                <!-- <img src="image3.jpg" alt="Reykjavik"> -->
-            </div>
-
-            <div class="swiper-slide">
-                <h2>February 20th</h2>
-                <p>Return flight to Budapest at 6 pm Iceland time. Spend the night in Budapest.</p>
-                <!-- Add an image here for Budapest -->
-                <!-- <img src="image4.jpg" alt="Budapest"> -->
-            </div>
-
-            <div class="swiper-slide">
-                <h2>February 21st</h2>
-                <p>Return home to Targu Mures.</p>
-                <!-- Add an image here for Targu Mures -->
-                <!-- <img src="image5.jpg" alt="Targu Mures"> -->
-            </div>
-
-        </div>
-        <!-- Add Navigation/Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+  <div id="fullpage">
+    <div class="section first-section">
+      <h1>Iceland Trip Itinerary</h1>
+      <h3 style="color: white">17 - 21 February 2024</h3>
     </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+    <div class="section">
+      <h2>Day 1 - February 17th</h2>
+      <div class="card-container">
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day1Budapest.png" alt="Budapest">
+          <div class="card-content">
+            <h3>Departure from Targu Mures</h3>
+            <ul>
+              <li>Time: 05:30</li>
+              <li>Destination: Budapest Airport parking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day1Flight.png" alt="Reykjavik Apartment">
+          <div class="card-content">
+            <h3>Flight to Reykjavik</h3>
+            <ul>
+              <li>Departure Time: 15:10 Hungary time</li>
+              <li>Flight duration: aprox. 4h</li>
+              <li>Destination: Reykjavik</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day1Apartment.png" alt="Reykjavik Apartment">
+          <div class="card-content">
+            <h3>Reykjavik</h3>
+            <ul>
+              <li>Arrival time: 19:10 local time</li>
+              <li>Bus from airport: TBD </li>
+              <li>Destination: Apartment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Day 2 - February 18th</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="snow"></div>
+          <img src="./day2Trip.png" alt="Solheimajokull">
+          <div class="card-content">
+            <h3>Day trip</h3>
+            <ul>
+              <li>Itinerary <a style="color:white" href="https://www.getyourguide.com/reykjavik-l30/turul-sudului-islandei-t67018/" target="_blank">here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="snow"></div>
+          <img src="./day2Aurora.png" alt="Reynisfjara Beach">
+          <div class="card-content">
+            <h3>Northern Lights Hunt</h3>
+            <ul>
+              <li>Itinerary <a style="color:white" href="https://www.getyourguide.com/reykjavik-l30/turul-cu-autobuzul-pentru-aurora-boreala-t67019/" target="_blank">here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Day 3 - February 19th</h2>
+      <div class="card-container">
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day3CityBreak.png" alt="Reykjavik Town">
+          <div class="card-content">
+            <h3>Reykjavik</h3>
+            <ul>
+              <li>Explore the beautiful town of Reykjavik</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day2Aurora.png" alt="Reynisfjara Beach">
+          <div class="card-content">
+            <h3>Northern Lights Hunt (another try)</h3>
+            <ul>
+              <li>Itinerary <a style="color:white" href="https://www.getyourguide.com/reykjavik-l30/turul-cu-autobuzul-pentru-aurora-boreala-t67019/" target="_blank">here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Day 4 - February 20th</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="snow"></div>
+          <img src="./day4Flight.png" alt="Flight to Budapest">
+          <div class="card-content">
+            <h3>Flight to Budapest</h3>
+            <ul>
+              <li>Bus to airport: TBD</li>
+              <li>Departure time: 18:05 local time</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="snow"></div>
+          <img src="./day4Budapest.png" alt="Flight to Budapest">
+          <div class="card-content">
+            <h3>Overnight stay in Budapest</h3>
+            <ul>
+              <li>Arrival time: 23:35 Hungary time</li>
+              <li>Destination: Accomodation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Day 5 - February 21st</h2>
+      <div class="card-container">
+        <div class="card" style="background-color: #E74C3C">
+          <div class="snow"></div>
+          <img src="./day5.png" alt="Flight to Budapest">
+          <div class="card-content">
+            <h3>Return to Victor</h3>
+            <ul>
+              <li>Breakfast</li>
+              <li>Hit the road</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors:['home', 'day1', 'day2', 'day3', 'day4', 'day5'],
+        sectionsColor: ['#E74C3C', '#355E3B', '#E74C3C', '#355E3B', '#E74C3C', '#355E3B']
+      });
+      
+      // Add snowflakes
+      const createSnowflake = () => {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        const size = Math.random() * 4 + 1;
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+        document.body.appendChild(snowflake);
+        
+        // Remove snowflake after animation
+        snowflake.addEventListener('animationend', () => {
+          snowflake.remove();
+          createSnowflake();
         });
-    </script>
+      };
+      
+      // Create initial snowflakes
+      for (let i = 0; i < 50; i++) {
+        createSnowflake();
+      }
+    });
+  </script>
 
 </body>
 </html>
+
