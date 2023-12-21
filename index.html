@@ -1,15 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iceland Trip Itinerary</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            color: #34495e;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-	<div>
-	 	<h1>Asta este heading 1</h1>
-	 	<button id="myButton" onclick="myFunction()" style="color:red">Click me</button>
-	</div>
-	
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <h2>February 17th</h2>
+                <p>Departure from Targu Mures. Arrive in Budapest and leave the car. Flight to Reykjavik at 3 pm local time. Arrival at 7 pm local time. Check into your apartment in Reykjavik.</p>
+                <!-- Add an image here for Budapest or the airplane -->
+                <!-- <img src="image1.jpg" alt="Budapest or airplane image"> -->
+            </div>
+
+            <div class="swiper-slide">
+                <h2>February 18th</h2>
+                <p>Day trip to the south part of the island. Visit Solheimajokull cascade and Reynisfjara beach starting at 8 am. Northern Lights hunt at 8:30 pm.</p>
+                <!-- Add images here for Solheimajokull cascade, Reynisfjara beach, and Northern Lights -->
+                <!-- <img src="image2.jpg" alt="Solheimajokull"> -->
+            </div>
+
+            <div class="swiper-slide">
+                <h2>February 19th</h2>
+                <p>Explore the beautiful town of Reykjavik.</p>
+                <!-- Add images here for Reykjavik -->
+                <!-- <img src="image3.jpg" alt="Reykjavik"> -->
+            </div>
+
+            <div class="swiper-slide">
+                <h2>February 20th</h2>
+                <p>Return flight to Budapest at 6 pm Iceland time. Spend the night in Budapest.</p>
+                <!-- Add an image here for Budapest -->
+                <!-- <img src="image4.jpg" alt="Budapest"> -->
+            </div>
+
+            <div class="swiper-slide">
+                <h2>February 21st</h2>
+                <p>Return home to Targu Mures.</p>
+                <!-- Add an image here for Targu Mures -->
+                <!-- <img src="image5.jpg" alt="Targu Mures"> -->
+            </div>
+
+        </div>
+        <!-- Add Navigation/Pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
-<script>
-	function myFunction() {alert('Butonul a fost apasat!'); const button = document.getElementById('myButton'); button.style.color = "blue";};
-</script>
 </html>
